@@ -5,7 +5,7 @@ CarrierWave.configure do |config|
     :aws_secret_access_key  => ENV['S3_SECRET'],       # required
 
   }
-  config.fog_directory  = 'songbucket'                     # required
+  config.fog_directory  = 'mpbucket'                     # required
   config.fog_public     = false
 
 end
