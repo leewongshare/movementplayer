@@ -8,7 +8,8 @@ gem 'rails', '3.2.8'
 gem 'pg'
 gem 'annotate'
 gem 'carrierwave'
-gem "fog", '~> 1.3.1'
+gem 'fog', '~> 1.3.1'
+gem 'thin'
 
 
 # Gems used only for assets and not required
