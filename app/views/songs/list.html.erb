@@ -17,7 +17,7 @@
     <audio controls src="<%= song.audiofile %>">
     </audio>
     </td>
-    <td><%= link_to 'buy it now', song %></td>
+    <td><%= link_to 'buy it now', new_song_purchase_path(song) %></td>
 </td>
   </tr>
 <% end %>
