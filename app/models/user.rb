@@ -14,4 +14,7 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password
 
 
+  has_many :purchases
+  has_many :songs, :through => :purchases
+
 end

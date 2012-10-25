@@ -14,4 +14,8 @@ class Song < ActiveRecord::Base
   attr_accessible :name, :price, :audiofile
 
   mount_uploader :audiofile, MikUploader
+
+  has_many :purchases
+  has_many :users, :through => :purchases
+
 end
