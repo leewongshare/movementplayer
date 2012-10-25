@@ -11,7 +11,56 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121024184656) do
+ActiveRecord::Schema.define(:version => 20121025140135) do
+
+  create_table "albums", :force => true do |t|
+    t.string   "name"
+    t.string   "photo"
+    t.date     "releasedate"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "albums_artists", :id => false, :force => true do |t|
+    t.integer "album_id"
+    t.integer "artist_id"
+  end
+
+  create_table "albums_songs", :id => false, :force => true do |t|
+    t.integer "album_id"
+    t.integer "song_id"
+  end
+
+  create_table "artists", :force => true do |t|
+    t.string   "name"
+    t.date     "birthdate"
+    t.string   "photo"
+    t.text     "biography"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "genres", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "genres_songs", :id => false, :force => true do |t|
+    t.integer "song_id"
+    t.integer "genre_id"
+  end
+
+  create_table "playlists", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "playlists_songs", :id => false, :force => true do |t|
+    t.integer "playlist_id"
+    t.integer "song_id"
+  end
 
   create_table "purchases", :force => true do |t|
     t.integer  "user_id"
