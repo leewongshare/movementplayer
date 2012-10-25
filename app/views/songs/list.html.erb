@@ -1,0 +1,27 @@
+<h1>List of Songs You can Buy</h1>
+
+<table>
+  <tr>
+    <th>Song</th>
+    <th>Price</th>
+    <th>Audio</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @songs.each do |song| %>
+  <tr>
+    <td><%= song.name %></td>
+    <td><%= song.price %></td>
+    <td>
+    <audio controls src="<%= song.audiofile %>">
+    </audio>
+    </td>
+    <td><%= link_to 'buy it now', song %></td>
+</td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
