@@ -1,0 +1,23 @@
+<h1>Show Song </h1>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @song.name %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @song.price %>
+</p>
+
+<p>
+  <b>Audio</b>
+  <audio controls src="<%= @song.audiofile %>">
+  </audio>
+</p>
+
+
+<%= link_to 'Edit', edit_song_path(@song) %> |
+<%= link_to 'Back', songs_path %>
