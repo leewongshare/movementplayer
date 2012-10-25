@@ -4,6 +4,7 @@ Movementplayer::Application.routes.draw do
 
   match '/buysongs' => 'songs#list'
 
+  resources :purchases
   resources :users
   resources :songs do
     resources :purchases
