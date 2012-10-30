@@ -17,4 +17,6 @@ class User < ActiveRecord::Base
   has_many :purchases
   has_many :songs, :through => :purchases
 
+  validates :name, :email, :password, :presence => true
+
 end

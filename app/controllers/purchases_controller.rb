@@ -1,6 +1,7 @@
 class PurchasesController < ApplicationController
 
   def create
+    raise params[:purchase].inspect
     @purchase = Purchase.new(params[:purchase])
     @purchase.user = User.first
     @purchase.save
