@@ -8,10 +8,11 @@
 #  password   :string(255)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  acctype    :string(255)
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :name, :email, :password
+  attr_accessible :name, :email, :password, :acctype
 
 
   has_many :purchases
