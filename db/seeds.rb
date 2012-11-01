@@ -17,9 +17,4 @@ u2.save
 u3.save
 u4.save
 
-s1 = Song.create(:name => "Moliendo Cafe", :price => 1.0, :audiofile => "/Users/wonglee/Music/iTunes/iTunes Music/Willie Villegas/Dancer's Paradise/03 Moliendo Cafe.mp3")
-
-s1.save
-
-
 
